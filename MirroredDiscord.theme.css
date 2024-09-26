@@ -1,0 +1,32 @@
+/**
+ * @name Mirrored Discord
+ * @author Noapoleon
+ * @description Mirrored interface, for discord on my left monitor so I don't break my neck looking at notifications.
+ * @version 0.0.1
+ */
+
+ /* server sidebar to the right*/
+div[class^='container_']:has( nav[class^='wrapper_'], div[class^='base_'])
+{
+    flex-direction: row-reverse;
+}
+
+/* Server sidebar new messages pill to the right */
+div[class^='listItem_'] > div[class^='pill_']
+{
+    left: inherit;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+/* guild sidebar to the right*/
+div[class^='content_']:has( div[class^='content_'], div[class^='sidebar_'])
+{
+    flex-direction: row-reverse;
+}
+
+/* guild sidebar border radius changed to right*/
+div[class^='content_'] > div[class^='sidebar_']
+{
+    border-radius: 0 8px 0;
+}
